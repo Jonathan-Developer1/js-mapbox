@@ -147,6 +147,8 @@ function processar() {
     const nome = document.getElementById("nome").value.trim();
     const latitude = document.getElementById("latitude").value.trim();
     const longitude = document.getElementById("longitude").value.trim();
+    const descricao = document.getElementById("descricao").value.trim();
+    const endereco = document.getElementById("endereco").value.trim();
     const cor = document.getElementById("cor").value;
 
     var local = {

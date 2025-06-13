@@ -1,0 +1,118 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    /* Faz com que largura e altura incluam bordas e padding no cálculo. */
+}
+
+/*
+box-sizing: content-box;
+  Especifica que apenas o conteúdo deve ser considerado
+  na largura e na altura total do elemento:
+  content width + padding + border => largura real do elemento
+  content height + padding + border => altura real do elemento 
+  Ou seja: o elemento fica maior do que especificado 
+           na largura e na altura.
+
+box-sizing: border-box;
+  Especifica que o conteúdo, o padding e a borda devem ser 
+  considerados na largura e na altura total do elemento.
+*/
+
+body {
+    line-height: 1.6;
+    /* Define o espaçamento entre linhas para melhorar a legibilidade. */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* vh: viewport height (altura da janela de visualização). */
+}
+
+header,
+footer {
+    height: 5rem;
+    background-color: rgb(82 82 91);
+    /* Zinc 600 no Tailwind CSS. */
+    color: rgb(244 244 245);
+    /* Zinc 100 no Tailwind CSS. */
+}
+
+header a,
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: rgb(82 82 91);
+    /* Zinc 600 no Tailwind CSS. */
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+#botaoMapa {
+    height: 3rem;
+    width: 8rem;
+    margin: 0.5rem;
+}
+
+#botaoLocalizacao {
+    padding: .5rem;
+}
+
+#map {
+    flex: 1;
+    height: 100%;
+    color: white;
+}
+
+#barralateral {
+    padding: .5rem;
+    width: 11rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgb(113, 113, 112); /* Zinc 300 no Tailwind CSS. */
+    padding-right: 1rem;
+}
+
+input {
+    padding: .5rem;
+}
+
+#cor {
+  appearance: none; /* Remove o estilo padrão. O outro valor possível é 'auto'. */
+  -webkit-appearance: none; /* Remove o estilo padrão nos navegadores Safari e Chrome. O outro valor possível é 'auto'. */
+  -moz-appearance: none;    /* Remove o estilo padrão no navegador Firefox. O outro valor possível é 'auto'. */
+  border: none;
+  width: 10.9rem; /* Largura do retângulo. */
+  height: 2.5rem; /* Altura do retângulo. */
+  cursor: pointer;
+}
+
+.mapboxgl-popup-content {
+    background: white;
+    color: black;
+    font-family: sans-serif;
+}
+
+.mapboxgl-popup-content a {
+    color: #007cbf;
+    text-decoration: underline;
+}
+
+.mapboxgl-popup-tip {
+    border-top-color: white;
+}
